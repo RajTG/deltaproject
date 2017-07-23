@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context="com.example.android.footystat.MainActivity">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@mipmap/homeimg" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:alpha="0.5"
+        android:background="#3f3f3f"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:background="#000000"
+            android:orientation="horizontal">
+
+            <AutoCompleteTextView
+                android:id="@+id/clubname"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:autoText="false"
+                android:background="#ffffff"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Club Name "
+                android:textColor="#3f3f3f"
+                android:textColorLink="#3f3f3f"
+                android:textSize="20dp" />
+
+            <Button
+                android:id="@+id/go"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:onClick="onClick"
+                android:text="GO!"
+                android:textSize="30dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/team2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="70dp"
+        android:layout_weight="1"
+        android:alpha="0.7"
+        android:background="#009900"
+        android:fontFamily="cursive"
+        android:text="   The Beautiful Game"
+        android:textColor="#ffffff"
+        android:textColorLink="@android:color/background_light"
+        android:textSize="40dp" />
+
+    <Button
+        android:id="@+id/fixbtn"
+        android:onClick="parseJSON"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_above="@+id/teams"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:alpha="0.6"
+        android:background="#009900"
+        android:text="Fixtures"
+        android:textColor="#ffffff"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/teams"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:alpha="0.6"
+        android:background="#009900"
+        android:text="Teams"
+        android:textColor="#ffffff"
+        android:visibility="gone"/>
+
+</RelativeLayout>
